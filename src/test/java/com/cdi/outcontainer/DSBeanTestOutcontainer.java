@@ -42,6 +42,10 @@ public class DSBeanTestOutcontainer {
 	public void shouldInjectSystemProperty(){
 		assertEquals(myBean.getTestSystemProperty(), "test");
 		assertEquals(test, "test");
+	}
+
+	@Test
+	public void shouldInjectPropertyFromFile(){
 		assertEquals(myBean.getPropertyFromFile(), "test from file");
 		assertEquals(propertyFromFile, "test from file");
 	}
