@@ -40,7 +40,7 @@ public class MyBeanTestOutcontainer {
 	}
 
 	@Test
-	public void dummyTest() {
+	public void myBeanShouldBeAlive() {
 		MyBean myBean = weldContainer.instance().select(MyBean.class).get();
 		assertNotNull(myBean);
 		assertTrue(myBean.isAlive());
