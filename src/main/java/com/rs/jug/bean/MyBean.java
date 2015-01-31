@@ -14,6 +14,10 @@ public class MyBean {
 	@Inject
 	@ConfigProperty(name="test")
 	String test;
+
+	@Inject
+	@ConfigProperty(name="mykey")
+	String propertyFromFile;
 	
 	@PostConstruct
 	public void init(){
@@ -26,5 +30,9 @@ public class MyBean {
 
 	public String getTestSystemProperty(){
 		return test;
+	}
+
+	public String getPropertyFromFile(){
+		return propertyFromFile;
 	}
 }

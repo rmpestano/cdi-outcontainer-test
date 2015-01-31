@@ -52,6 +52,7 @@ public class MyBeanTestOutcontainer {
 	public void shouldInjectSystemProperty(){
 		MyBean myBean = weldContainer.instance().select(MyBean.class).get();
 		assertEquals(myBean.getTestSystemProperty(), "test");
+		assertEquals(myBean.getPropertyFromFile(), "test from file");
 		assertNull(test);//same as myBean2
 	}
 
